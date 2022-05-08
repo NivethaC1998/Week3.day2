@@ -1,0 +1,21 @@
+package week3.day2;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class FindIntersection {
+	public static void main(String[] args) {
+		Integer[] arr1 = {3,2,11,4,6,7};
+		Integer[] arr2 = {1,2,8,4,9,7};
+		//Initialing new set
+		Set <Integer> set1 = new HashSet<Integer> ();
+		//converting arr1 to list and adding it to set1
+		set1.addAll(Arrays.asList(arr1));
+		//checking matched values in arr2 by converting arr2 to list
+		set1.retainAll(Arrays.asList(arr2));
+		for (Integer Num : set1)
+			System.out.println(Num);
+	}
+
+}
